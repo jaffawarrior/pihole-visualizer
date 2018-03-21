@@ -256,6 +256,9 @@
         <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
         <option name="charting.legend.placement">right</option>
         <option name="refresh.display">progressbar</option>
+        <drilldown>
+          <link target="_blank">/app/piHoleVis/ClientActivity?Client=$click.name2$</link>
+        </drilldown>
       </chart>
     </panel>
     <panel>
@@ -266,12 +269,9 @@
           <earliest>-60m</earliest>
           <latest>now</latest>
         </search>
-        <option name="wrap">false</option>
-        <option name="rowNumbers">false</option>
-        <option name="dataOverlayMode">none</option>
-        <option name="count">10</option>
         <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
         <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
+        <option name="charting.axisTitleX.text">Time</option>
         <option name="charting.axisTitleX.visibility">visible</option>
         <option name="charting.axisTitleY.visibility">visible</option>
         <option name="charting.axisTitleY2.visibility">visible</option>
@@ -293,7 +293,9 @@
         <option name="charting.layout.splitSeries.allowIndependentYRanges">0</option>
         <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
         <option name="charting.legend.placement">right</option>
-        <option name="charting.axisTitleX.text">Time</option>
+        <drilldown>
+          <link target="_blank">/app/piHoleVis/ClientActivity?Client=$click.name2$</link>
+        </drilldown>
       </chart>
     </panel>
   </row>
