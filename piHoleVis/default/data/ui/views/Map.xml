@@ -1,0 +1,105 @@
+<form onunloadcanceljobs="true">
+  <label>GeoLocation</label>
+  <fieldset submitButton="true" autoRun="true">
+    <input type="time" token="time_token" searchWhenChanged="false">
+      <label>Time Picker</label>
+      <default>
+        <earliest>-60m@m</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input type="text" token="client_token" searchWhenChanged="true">
+      <label>Client</label>
+      <default>*</default>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <html src="docs/GeoLocation.html"/>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <map>
+        <title>Server Locations</title>
+        <search>
+          <query>index=pi-hole 
+| rex field=_raw "reply (?&lt;ReplyFQDN&gt;.*) is (?&lt;ReplyIP&gt;.*)" 
+| search NOT "&lt;CNAME&gt;" 
+| rex field=_raw "query\[A\]{1,5} (?&lt;dump&gt;.*) from (?&lt;ClientIP&gt;.*)" 
+| iplocation ReplyIP 
+| geostats globallimit=5 count by ReplyFQDN</query>
+          <earliest>$time_token.earliest$</earliest>
+          <latest>$time_token.latest$</latest>
+        </search>
+        <earliest>-60m</earliest>
+        <latest>now</latest>
+        <!-- use custom colors -->
+        <!-- adjust marker opacity and size range -->
+        <!-- set initial map center and zoom level -->
+        <option name="drilldown">none</option>
+        <option name="height">500</option>
+        <option name="mapping.choroplethLayer.colorBins">5</option>
+        <option name="mapping.choroplethLayer.colorMode">auto</option>
+        <option name="mapping.choroplethLayer.maximumColor">0xDB5800</option>
+        <option name="mapping.choroplethLayer.minimumColor">0x2F25BA</option>
+        <option name="mapping.choroplethLayer.neutralPoint">0</option>
+        <option name="mapping.choroplethLayer.shapeOpacity">0.75</option>
+        <option name="mapping.choroplethLayer.showBorder">1</option>
+        <option name="mapping.data.maxClusters">100</option>
+        <option name="mapping.map.center">(31.95,161.54)</option>
+        <option name="mapping.map.panning">1</option>
+        <option name="mapping.map.scrollZoom">1</option>
+        <option name="mapping.map.zoom">2</option>
+        <option name="mapping.markerLayer.markerMaxSize">40</option>
+        <option name="mapping.markerLayer.markerMinSize">20</option>
+        <option name="mapping.markerLayer.markerOpacity">0.5</option>
+        <option name="mapping.seriesColors">[0x5379af,0x9ac23c,0xf7902b,0x956d95,0x6ab7c7,0xd85d3c,0xfac51c,0xdd86af]</option>
+        <option name="mapping.showTiles">1</option>
+        <option name="mapping.tileLayer.maxZoom">7</option>
+        <option name="mapping.tileLayer.minZoom">0</option>
+        <option name="mapping.tileLayer.tileOpacity">0.9</option>
+        <option name="mapping.type">marker</option>
+        <option name="refresh.display">progressbar</option>
+      </map>
+    </panel>
+    <panel>
+      <table>
+        <title>Domains Requested</title>
+        <search>
+          <query>| savedsearch "totalQueries" | rename Query AS Domain | stats count AS Count by Domain | sort -Count</query>
+          <earliest>$time_token.earliest$</earliest>
+          <latest>$time_token.latest$</latest>
+        </search>
+        <option name="count">18</option>
+        <option name="dataOverlayMode">heatmap</option>
+        <option name="drilldown">cell</option>
+        <option name="rowNumbers">false</option>
+        <option name="wrap">false</option>
+        <drilldown>
+          <link target="_blank">/app/piHoleVis/DomainActivity?domain=$click.value$</link>
+        </drilldown>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <title>Clients Making Requests</title>
+        <search>
+          <query>| savedsearch "totalQueries" | rename ClientIP AS Client |  search Client=* | stats count(Query) As "Request Count" by Client | sort +Client | search Client!=127.0.0.1</query>
+          <earliest>$time_token.earliest$</earliest>
+          <latest>$time_token.latest$</latest>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">heatmap</option>
+        <option name="drilldown">cell</option>
+        <option name="rowNumbers">false</option>
+        <option name="wrap">false</option>
+        <drilldown>
+          <link target="_blank">/app/piHoleVis/ClientActivity?Client=$click.value$</link>
+        </drilldown>
+      </table>
+    </panel>
+  </row>
+</form>

@@ -1,0 +1,7 @@
+<dashboard onunloadcanceljobs="true">
+  <label>About</label>
+  <description/>
+	<row>
+      <html src="docs/piHoleVisAbout.html"/>
+	</row>      
+</dashboard>

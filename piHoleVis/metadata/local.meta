@@ -1,0 +1,148 @@
+[app/install/install_source_checksum]
+version = 7.0.2
+modtime = 1521501429.085915000
+
+[app/install/state]
+version = 6.3.2
+modtime = 1454231435.063202000
+
+[savedsearches/piClock]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 6.3.2
+modtime = 1454230228.214086400
+
+[savedsearches/blkHoledDomains]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 7.0.2
+modtime = 1521552507.748486000
+
+[savedsearches/piDisk]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 6.3.2
+modtime = 1454230232.342019700
+
+[savedsearches/piLoad]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 6.3.2
+modtime = 1454230236.239609600
+
+[savedsearches/piMem]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 7.0.2
+modtime = 1521643953.869009000
+
+[savedsearches/piTemp]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 6.3.2
+modtime = 1454230243.030758500
+
+[savedsearches/piTop]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 6.3.2
+modtime = 1454230246.062565600
+
+[savedsearches/piVolts]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 6.3.2
+modtime = 1454226321.202121700
+
+[savedsearches/totalQueries]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 6.3.2
+modtime = 1454230259.094857000
+
+[views/About]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 6.3.2
+modtime = 1454230185.978384800
+
+[views/ClientActivity]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 7.0.2
+modtime = 1521640220.166329000
+
+[views/Diagnostic]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 6.3.2
+modtime = 1454230196.368598400
+
+[views/DomainActivity]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 7.0.2
+modtime = 1521644383.203547000
+
+[views/Map]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 7.0.2
+modtime = 1521644214.977165000
+
+[views/Summary]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 7.0.2
+modtime = 1521644562.705283000
+
+[nav/default]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 6.3.2
+modtime = 1454230223.672017900
+
+[views/raspberryPi]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = nobody
+version = 6.3.2
+modtime = 1454230253.001577800
+
+[views/SpeedTest]
+version = 6.3.2
+modtime = 1456035808.467918700
+
+[props/speedtest/REPORT-speedtest]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 6.3.2
+modtime = 1454487437.011671800
+
+[savedsearches/speedtest]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 6.3.2
+modtime = 1454487738.629737500
+
+[views/RaspberryPi]
+version = 7.0.2
+modtime = 1521642539.814642000
