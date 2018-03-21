@@ -1,0 +1,85 @@
+start	stop	from	from_ip	server	server_dist (km)	server_ping (ms)	download (Mbit/s)	upload (Mbit/s)	share_url
+2018-03-20 02:06:17	2018-03-20 02:06:49	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	23.137	54.93	6.16	http://www.speedtest.net/result/7154868195.png
+2018-03-20 02:30:01	2018-03-20 02:30:35	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	24.583	45.56	3.83	http://www.speedtest.net/result/7154902752.png
+2018-03-20 03:00:01	2018-03-20 03:00:36	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	24.936	47.33	4.43	http://www.speedtest.net/result/7154945421.png
+2018-03-20 03:30:01	2018-03-20 03:30:34	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	22.156	52.49	2.87	http://www.speedtest.net/result/7154987687.png
+2018-03-20 04:00:01	2018-03-20 04:00:41	Comcast Cable	71.63.18.9	Shentel (Edinburg, VA)	38.99	25.568	20.43	6.15	http://www.speedtest.net/result/7155029263.png
+2018-03-20 04:30:01	2018-03-20 04:30:34	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	27.383	42.90	3.11	http://www.speedtest.net/result/7155070946.png
+2018-03-20 05:00:01	2018-03-20 05:00:39	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	26.768	39.66	4.93	http://www.speedtest.net/result/7155112671.png
+2018-03-20 05:30:01	2018-03-20 05:30:39	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	26.925	36.39	4.10	http://www.speedtest.net/result/7155157279.png
+2018-03-20 06:00:01	2018-03-20 06:00:36	Comcast Cable	71.63.18.9	Shentel (Edinburg, VA)	38.99	25.029	40.23	4.00	http://www.speedtest.net/result/7155200540.png
+2018-03-20 06:30:01	2018-03-20 06:30:34	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	24.683	40.20	2.99	http://www.speedtest.net/result/7155247237.png
+2018-03-20 07:00:01	2018-03-20 07:00:36	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	23.309	66.10	5.03	http://www.speedtest.net/result/7155296416.png
+2018-03-20 07:30:01	2018-03-20 07:30:37	Comcast Cable	71.63.18.9	Shentel (Edinburg, VA)	38.99	28.365	41.21	4.20	http://www.speedtest.net/result/7155349412.png
+2018-03-20 08:00:01	2018-03-20 08:00:38	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	25.1	56.62	3.84	http://www.speedtest.net/result/7155404155.png
+2018-03-20 08:30:01	2018-03-20 08:30:34	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	29.818	46.12	3.41	http://www.speedtest.net/result/7155461164.png
+2018-03-20 09:00:02	2018-03-20 09:00:40	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	29.089	69.72	3.97	http://www.speedtest.net/result/7155520610.png
+2018-03-20 09:30:01	2018-03-20 09:30:34	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	27.729	41.65	4.14	http://www.speedtest.net/result/7155581905.png
+2018-03-20 10:00:01	2018-03-20 10:00:36	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	24.094	73.52	4.00	http://www.speedtest.net/result/7155644409.png
+2018-03-20 10:30:01	2018-03-20 10:30:33	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	23.688	42.33	2.98	http://www.speedtest.net/result/7155707777.png
+2018-03-20 11:00:01	2018-03-20 11:00:39	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	26.524	61.69	3.71	http://www.speedtest.net/result/7155772629.png
+2018-03-20 11:30:01	2018-03-20 11:30:34	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	29.488	40.74	3.97	http://www.speedtest.net/result/7155836942.png
+2018-03-20 12:00:01	2018-03-20 12:00:41	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	29.772	23.13	5.51	http://www.speedtest.net/result/7155903301.png
+2018-03-20 12:30:02	2018-03-20 12:30:34	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	21.996	65.92	4.35	http://www.speedtest.net/result/7155972381.png
+2018-03-20 13:00:01	2018-03-20 13:00:37	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	31.855	43.56	4.17	http://www.speedtest.net/result/7156044437.png
+2018-03-20 13:30:01	2018-03-20 13:30:39	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	28.7	35.03	5.21	http://www.speedtest.net/result/7156122338.png
+2018-03-20 14:00:01	2018-03-20 14:00:35	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	28.5	45.48	3.29	http://www.speedtest.net/result/7156201724.png
+2018-03-20 14:30:02	2018-03-20 14:30:34	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	25.641	40.25	3.29	http://www.speedtest.net/result/7156286302.png
+2018-03-20 15:00:01	2018-03-20 15:00:42	Comcast Cable	71.63.18.9	Shentel (Edinburg, VA)	38.99	25.608	19.83	6.15	http://www.speedtest.net/result/7156372074.png
+2018-03-20 15:30:02	2018-03-20 15:30:34	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	26.345	34.79	3.33	http://www.speedtest.net/result/7156458258.png
+2018-03-20 16:00:01	2018-03-20 16:00:36	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	23.495	40.59	4.22	http://www.speedtest.net/result/7156543930.png
+2018-03-20 16:30:02	2018-03-20 16:30:34	Comcast Cable	71.63.18.9	Shentel (Edinburg, VA)	38.99	30.33	36.50	3.34	http://www.speedtest.net/result/7156628427.png
+2018-03-20 17:00:01	2018-03-20 17:00:34	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	26.565	37.80	3.66	http://www.speedtest.net/result/7156712445.png
+2018-03-20 17:30:01	2018-03-20 17:30:34	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	28.934	41.58	3.44	http://www.speedtest.net/result/7156798611.png
+2018-03-20 18:00:01	2018-03-20 18:00:37	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	22.862	47.74	3.21	http://www.speedtest.net/result/7156885797.png
+2018-03-20 18:30:01	2018-03-20 18:30:34	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	28.429	42.42	3.84	http://www.speedtest.net/result/7156970779.png
+2018-03-20 19:00:01	2018-03-20 19:00:33	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	23.823	45.75	3.21	http://www.speedtest.net/result/7157052254.png
+2018-03-20 19:30:01	2018-03-20 19:30:34	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	27.457	43.01	3.22	http://www.speedtest.net/result/7157131451.png
+2018-03-20 20:00:01	2018-03-20 20:00:35	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	27.88	31.48	4.82	http://www.speedtest.net/result/7157206581.png
+2018-03-20 20:30:02	2018-03-20 20:30:35	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	25.856	42.89	3.90	http://www.speedtest.net/result/7157278294.png
+2018-03-20 21:00:02	2018-03-20 21:00:35	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	27.872	22.28	2.11	http://www.speedtest.net/result/7157346150.png
+2018-03-20 21:30:01	2018-03-20 21:30:33	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	26.331	26.84	2.73	http://www.speedtest.net/result/7157409855.png
+2018-03-20 22:00:01	2018-03-20 22:00:37	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	24.125	42.62	4.86	http://www.speedtest.net/result/7157469395.png
+2018-03-20 22:30:01	2018-03-20 22:30:35	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	23.483	40.73	4.20	http://www.speedtest.net/result/7157524231.png
+2018-03-20 19:00:01	2018-03-20 19:00:39	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	23.036	54.75	6.15	http://www.speedtest.net/result/7157576222.png
+2018-03-20 19:03:54	2018-03-20 19:04:27	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	24.156	52.51	6.10	http://www.speedtest.net/result/7157583049.png
+2018-03-20 19:30:01	2018-03-20 19:30:34	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	23.898	44.92	6.11	http://www.speedtest.net/result/7157626261.png
+2018-03-20 20:00:01	2018-03-20 20:00:40	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	27.09	51.99	6.17	http://www.speedtest.net/result/7157673855.png
+2018-03-20 20:30:01	2018-03-20 20:30:34	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	27.778	40.56	5.97	http://www.speedtest.net/result/7157720781.png
+2018-03-20 21:00:01	2018-03-20 21:00:41	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	25.6	43.54	6.06	http://www.speedtest.net/result/7157767114.png
+2018-03-20 21:30:01	2018-03-20 21:30:35	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	27.206	54.04	5.82	http://www.speedtest.net/result/7157813016.png
+2018-03-20 22:00:01	2018-03-20 22:00:35	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	22.947	51.08	5.96	http://www.speedtest.net/result/7157858909.png
+2018-03-20 22:30:01	2018-03-20 22:30:36	Comcast Cable	71.63.18.9	Shentel (Edinburg, VA)	38.99	30.542	28.47	5.90	http://www.speedtest.net/result/7157905310.png
+2018-03-20 23:00:01	2018-03-20 23:00:36	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	25.576	55.63	5.93	http://www.speedtest.net/result/7157950662.png
+2018-03-20 23:30:01	2018-03-20 23:30:35	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	30.012	46.14	6.08	http://www.speedtest.net/result/7157994914.png
+2018-03-21 00:00:01	2018-03-21 00:00:36	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	22.336	56.02	6.12	http://www.speedtest.net/result/7158037853.png
+2018-03-21 00:30:01	2018-03-21 00:30:34	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	26.889	52.37	6.22	http://www.speedtest.net/result/7158081671.png
+2018-03-21 01:00:01	2018-03-21 01:00:36	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	24.29	60.34	6.21	http://www.speedtest.net/result/7158124595.png
+2018-03-21 01:30:01	2018-03-21 01:30:34	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	21.432	51.42	3.39	http://www.speedtest.net/result/7158170504.png
+2018-03-21 02:00:01	2018-03-21 02:00:37	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	25.555	30.16	6.16	http://www.speedtest.net/result/7158215803.png
+2018-03-21 02:30:01	2018-03-21 02:30:35	Comcast Cable	71.63.18.9	Shentel (Edinburg, VA)	38.99	29.455	43.18	6.13	http://www.speedtest.net/result/7158266699.png
+2018-03-21 03:00:01	2018-03-21 03:00:34	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	26.322	49.77	6.17	http://www.speedtest.net/result/7158317436.png
+2018-03-21 03:30:01	2018-03-21 03:30:33	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	26.618	43.09	6.18	http://www.speedtest.net/result/7158372742.png
+2018-03-21 04:00:01	2018-03-21 04:00:38	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	23.571	36.46	6.22	http://www.speedtest.net/result/7158428240.png
+2018-03-21 04:30:01	2018-03-21 04:30:34	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	22.908	58.08	6.21	http://www.speedtest.net/result/7158486722.png
+2018-03-21 05:00:02	2018-03-21 05:00:35	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	23.774	59.23	6.23	http://www.speedtest.net/result/7158547821.png
+2018-03-21 05:30:01	2018-03-21 05:30:34	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	23.696	58.57	6.18	http://www.speedtest.net/result/7158610154.png
+2018-03-21 06:00:01	2018-03-21 06:00:36	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	25.117	48.77	6.12	http://www.speedtest.net/result/7158672625.png
+2018-03-21 06:30:01	2018-03-21 06:30:33	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	25.252	54.02	6.01	http://www.speedtest.net/result/7158736488.png
+2018-03-21 07:00:01	2018-03-21 07:00:39	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	27.651	59.58	6.15	http://www.speedtest.net/result/7158801832.png
+2018-03-21 07:30:02	2018-03-21 07:30:39	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	24.117	65.19	6.32	http://www.speedtest.net/result/7158867183.png
+2018-03-21 08:00:01	2018-03-21 08:00:39	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	24.03	46.50	6.12	http://www.speedtest.net/result/7158935212.png
+2018-03-21 08:30:01	2018-03-21 08:30:36	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	28.688	50.27	6.17	http://www.speedtest.net/result/7159005594.png
+2018-03-21 09:00:01	2018-03-21 09:00:34	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	25.102	59.21	6.11	http://www.speedtest.net/result/7159078836.png
+2018-03-21 09:30:01	2018-03-21 09:30:34	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	24.799	50.17	6.10	http://www.speedtest.net/result/7159156290.png
+2018-03-21 10:00:01	2018-03-21 10:00:37	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	25.168	48.60	5.80	http://www.speedtest.net/result/7159237421.png
+2018-03-21 10:30:01	2018-03-21 10:30:33	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	24.543	46.54	6.16	http://www.speedtest.net/result/7159321107.png
+2018-03-21 11:00:01	2018-03-21 11:00:35	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	28.006	49.32	6.05	http://www.speedtest.net/result/7159405452.png
+2018-03-21 11:30:01	2018-03-21 11:30:33	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	28.796	51.88	6.08	http://www.speedtest.net/result/7159489719.png
+2018-03-21 12:00:01	2018-03-21 12:00:38	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	22.312	37.49	5.98	http://www.speedtest.net/result/7159574614.png
+2018-03-21 12:30:01	2018-03-21 12:30:35	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	29.444	42.28	6.10	http://www.speedtest.net/result/7159659778.png
+2018-03-21 13:00:01	2018-03-21 13:00:34	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	27.793	47.18	6.06	http://www.speedtest.net/result/7159744718.png
+2018-03-21 13:30:01	2018-03-21 13:30:35	Comcast Cable	71.63.18.9	All Points Broadband (Leesburg, VA)	53.73	27.158	56.45	6.17	http://www.speedtest.net/result/7159829448.png
+2018-03-21 14:00:01	2018-03-21 14:00:35	Comcast Cable	71.63.18.9	BroadAspect (Ashburn, VA)	57.43	27.716	32.11	6.11	http://www.speedtest.net/result/7159912842.png
+2018-03-21 14:30:01	2018-03-21 14:30:34	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	28.302	50.30	6.18	http://www.speedtest.net/result/7159995424.png
+2018-03-21 15:00:01	2018-03-21 15:00:36	Comcast Cable	71.63.18.9	Wave2Net LLC (Winchester, VA)	28.59	27.117	41.27	6.09	http://www.speedtest.net/result/7160074928.png
