@@ -1,0 +1,267 @@
+<html>
+<h1>Why:</h1>
+    I created <b>pi-hole Visualiser</b> because I had installed pi-hole but wanted to know more about what the clients on my home network were doing.<br>
+<h1>Acknowledgements:</h1>
+	  <ul>
+	  <li>The <a href="https://www.raspberrypi.org" target="_blank">Raspberry Pi Foundation</a>: For creating a REALLY easy way to experiment with and learn Linux, programming and computing in general.
+	  <li><a href="http://jacobsalmela.com" target="_blank">Jacob Salmela</a> the creator of <a href="https://pi-hole.net" target="_blank">pi-hole<a/>: If you haven't donated yet, given you have downloaded this Splunk App you probably should.</li>
+	  <li>The Ninjas @ <a href="https://www.splunk.com" target="_blank">Splunk</a>: For creating Splunk, The Universal forwarder for Linux ARM (Raspberry Pi) and the Splunk 6.x Dashboard Examples App used as a guide for visualisations.</li>
+	  <li>Speedtest-cli created by Matt Martz available <a href="https://github.com/sivel/speedtest-cli" target=_blank>here</a>.<br>
+	  </ul><p></p>
+<h1>Disclaimer:</h1>
+	  <ul>
+	  <li><b>pi-hole Visualiser</b> is provided as-is with no warranty expressed or implied.</li>
+	  <li>The use of <b>pi-hole Visualiser</b> on your Splunk infrastructure is entirely at your own risk.</li>
+	  <li><b>pi-hole Visualiser</b> is in no way associated with Jacob Salmela, The RaspberryPi Foundation or Splunk.</li>
+	  <li>Any trade marks used in this app belong to their respective owners, they know who they are.</li>
+	  <li>Licensed under the MIT License (Refer to License section at the bottom of this page for details).</li></br>
+	  </ul><p></p>
+<h1>Things you will need:</h1>
+      <ul>
+        <li><h2>Raspberry Pi</h2>
+		It must be capable of running both pi-hole and the splunk forwarder Agent. The Raspberry Pi 2, Model B, 1GB RAM is ideal.<br>
+		Refer to: <a href="https://raspberrypi.org" target="_blank">https://raspberrypi.org</a> for resellers.</li><br>
+		
+        <li><h2>pi-hole</h2>
+		Refer to: <a href="https://pi-hole.net" target="_blank">https://pi-hole.net</a> for instructions on how to install pi-hole onto your Raspberry Pi.</li><br>
+		
+        <li><h2>Splunk Universal Forwarder for ARM</h2>
+		Refer to: <a href="https://splunkbase.splunk.com/app/1611/" target="_blank">https://splunkbase.splunk.com/app/1611/</a> on how to download and install the forwarder on your Raspberry Pi.</li><br>
+        
+		<li><h2>Splunk Enterprise</h2>
+		<b>pi-hole Visualiser</b> was built and tested and deployed on Splunk Enterprise 6.3.2 using Deployment Server<br>
+		Some visualisations used by <b>pi-hole Visualiser</b> may not supported older versions.<br>
+		Refer to: <a href="http://www.splunk.com/en_us/download.html" target="_blank">http://www.splunk.com/en_us/download.html</a> for download and install instructions.</li><br>
+      </ul>
+	  <p></p>
+	  
+<h1>How to install and configure pi-hole Visualiser:</h1>
+      
+	  These instructions assume you have the <b>Splunk Universal Forwarder for ARM</b> installed on your Raspberry Pi and you have a compatible Splunk Enterprise system available.<p></p>
+	  <b>Note: $SPLUNK_HOME$</b> is the location where your Splunk searchhead instance is installed.<p></p>
+	  
+	  <ul>
+        <li>Install the <b>pi-hole Visualiser</b> (<b>piholeVis</b>) app into Splunk.<br>
+		Use either the Splunk GUI to install the app, or download and extract the <b>piholeVis</b> archive directly to <b>$SPLUNK_HOME$/etc/apps</b> on your searchhead. Restart Splunk to complete the install.</li><br>
+		
+        <li><b><font color="red">VERY IMPORTANT - Do not Skip these steps.</font></b><br><p></p>
+		
+		Copy <b><font color="red">pi-holeCollector.tar.gz</font></b> archive upto the Raspberry Pi to <b><font color="red">/tmp</font></b> using scp (or other file transfer program, I use puTTY pscp). SSH must be enabled on your Raspberry Pi for this to work.<br>
+		<table border="0"><tr><td>
+		<pre>pscp $SPLUNK_HOME$/etc/apps/piHoleVis/resources/pi-holeCollector.tar.gz pi@nnn.nnn.nnn.nnn:/tmp</pre>
+		</td></tr></table>
+		<p></p>
+		Where <b><font color="red">nnn.nnn.nnn.nnn</font></b> is the IP address of your Raspberry Pi.<p></p>
+		
+		Log into your Raspberry Pi as "pi" and elevate your session to root.<br>
+		<table border="0"><tr><td>
+		<pre>pi@RaspberryPi ~ $ sudo -s</pre>
+		</td></tr></table>
+		<p></p>
+		
+		<b>cd</b> to <b><font color="red">/tmp</font></b> and extract the <b>pi-holeCollector</b> app into the <b>Splunk Universal Forwarder for ARM</b>.<br>
+		<table border="0"><tr><td>
+		<pre>root@RaspberryPi:/home/pi# cd /tmp
+root@RaspberryPi:/tmp# tar -xvf pi-holeCollector.tar.gz -C /opt/splunkforwarder/etc/apps</pre>
+		</td></tr></table>
+		<p></p>
+		Using <b>nano</b> edit <b><font color="red">/opt/splunkforwarder/etc/apps/pi-holeCollector/default/outputs.conf</font></b> of the <b>pi-holeCollector</b> app update the [tcpout] stanza to where you want the <b>Splunk Universal Forwarder for ARM</b> to send the Log/Event data.<br>
+		<table border="0"><tr><td>
+		<pre>root@RaspberryPi:/tmp# nano /opt/splunkforwarder/etc/apps/pi-holeCollector/default/outputs.conf</pre>
+		</td></tr></table>
+		<p></p>
+		<table border="0"><tr><td>
+		<pre>[tcpout]
+defaultGroup=indexer
+# default
+[tcpout:indexer]
+server=xxx.xxx.xxx.xxx:9997</pre>
+		</td></tr></table>
+		<p></p>
+		Where <b><font color="red">xxx.xxx.xxx.xxx</font></b> is the IP of your indexer/heavy forwarder. It is assumed you are using the standard port of TCP 9997. If not, change this too.<p></p>
+		
+        <li>Reboot your Raspberry Pi to end your session. The <b>Splunk Universal Forwarder for ARM</b> should start automatically and the <b>pi-holeCollector</b> app along with it.<br>
+		<table border="0"><tr><td>
+		<pre>reboot</pre>
+		</td></tr></table>
+		<p></p>
+		</li>
+		
+		<li>Log into your Splunk Enterprise System and access <b>pi-hole Visualiser</b>. and discover what your network clients are upto.<br>
+		</li>
+      </ul>	  
+	  <p></p>
+	  
+<h1>How to install and configure speedtest:</h1>
+    
+	Speedtest-cli created by Matt Martz available <a href="https://github.com/sivel/speedtest-cli" target=_blank>here</a>
+	
+	Refer to the specific instuctions included in the root of the app named "SpeedTest Instructions.pdf" or from the link above.<p></p>
+	<b>Pi-hole Visualiser</b> expects the speed test to be run every 30mins, so when adding speedtest-csv to crontab use:<br>
+	<pre>*/30 * * * * speedtest-csv >> /var/www/html/speedtest.csv</pre>
+	instead of
+	<pre>0 * * * * speedtest-csv >> /var/www/html/speedtest.csv</pre>
+	<p></p>
+	  
+<h1>Troubleshooting</h1>
+	  <ul>
+	  <li><h4>Is pi-hole running and configured?</h4>
+	    Refer to: <a href="https://pi-hole.net" target="_blank">https://pi-hole.net</a> for advice.<p></p>
+		
+		Confirm that your client machines are using pi-hole as their DNS Server.<p></p>
+		
+		For Windows run <b>nslookup</b> from the commandline.<br>
+		<table border="0"><tr><td>
+		<pre>nslookup
+Default Server: Pi-Hole.IsWorking.OK
+Address: yyy.yyy.yyy.yyy
+</pre>
+		</td></tr></table>
+		<p></p>
+		<b>yyy.yyy.yyy.yyy</b> should be the IP of your Raspberry Pi running pi-hole. If it isn't then your clients are not using pi-hole form DNS.<p></p>
+		
+		Log into your Raspberry Pi and run the following command to tail the pi-hole log and review its content.<br>
+		<table border="0"><tr><td>
+		<pre>pi@RaspberryPi ~ $ tail -f /var/log/pihole.log</pre>
+		</td></tr></table>
+		<p></p>
+		On your client machine generate some web traffic (i.e. DNS lookups)<br>
+		If the pi-hole is running and you are pointing to it for DNS correctly you should see fresh log entries being written to the pihole.log.
+	   </li>
+	   <p></p>
+	   
+	   <li><h4>I am not seeing anything in Splunk?</h4>
+	   Refer to: <a href="https://splunkbase.splunk.com/app/1611/" target="_blank">https://splunkbase.splunk.com/app/1611/</a> to make sure you have installed the Splunk Universal Forwarder correctly.<p></p>
+	   
+	   Check that the pi-holeCollector app is installed correctly, your Splunk server is referenced correctly in <b>outputs.conf</b> and that the <b>pi-hole</b> index exists.<p></p>
+	   
+	   log into your Raspberry Pi and run the following command.<br>
+	<table border="0"><tr><td>
+	<pre>pi@RaspberryPi ~ $ ls -l /opt</pre>
+	</td></tr></table>
+	<p></p>
+		
+	If the <b>Splunk Universal forwarder for ARM</b> is installed you should see a directory called <b>splunkforwarder</b>.<br>
+	
+	<table border="0"><tr><td>
+	<pre>pi@RaspberryPi ~ $ ls -l /opt/splunkforwarder/etc/apps</pre>
+	</td></tr></table>
+	<p></p>
+	
+	Check that you have installed the <b>pi-holeCollector</b> app correctly.<br>
+	Check that splunk can execute the shell scripts.<br>
+	<table border="0"><tr><td>
+	<pre>pi@RaspberryPi ~ $ sudo -s
+root@RaspberryPi:/home/pi# ls -l /opt/splunkforwarder/etc/apps/pi-holeCollector/bin
+total 20
+4 -rwxr-xr-x 1 root root 39 Jan 30 20:39 clock.sh
+4 -rwxr-xr-x 1 root root 23 Jan 30 20:39 df.sh
+4 -rwxr-xr-x 1 root root 34 Jan 30 20:39 temp.sh
+4 -rwxr-xr-x 1 root root 79 Jan 30 20:39 top.sh
+4 -rwxr-xr-x 1 root root 35 Jan 30 20:39 volts.sh
+</pre></td></tr></table><p></p>
+
+Confirm that all the shell scripts are executable (as shown above). If not resolve this by running the following command.
+	<table border="0"><tr><td>
+	<pre>root@RaspberryPi:/home/pi# chmod +x /opt/splunkforwarder/etc/apps/pi-holeCollector/bin/*.sh
+</pre></td></tr></table>
+Exit your root session when finished.
+<p></p>
+
+	Check the splunk server that pi-holeVis is sending logs to that it is configured to recieve splunk events on TCP 9997.<br>
+	
+	Log into your Raspberry Pi and run the following command (You may need to install a telnet client first). xxx.xxx.xxx.xxx is the IP you are sending Splunk events too.<br>
+	<table border="0"><tr><td>
+	<pre>root@RaspberryPi:/home/pi# telnet xxx.xxx.xxx.xxx 9997
+Trying xxx.xxx.xxx.xxx...
+Connected to xxx.xxx.xxx.xxx.
+Escape character is '^]'.
+</pre></td></tr></table><p></p>
+If the port is open and the IP address is correct you will see the valid connection.<p></p>
+	
+	Log into your Raspberry Pi and run the following command.<br>
+	<table border="0"><tr><td>
+	<pre>root@RaspberryPi:/home/pi# top | grep splunkd
+1746 root      20   0   88400  40644  17208 S   5.8  4.3   7:53.31 splunkd
+1746 root      20   0   88400  40644  17208 S   0.7  4.3   7:53.33 splunkd
+1747 root      20   0   25212   5980   4876 S   0.3  0.6   0:41.08 splunkd
+</pre></td></tr></table><p></p>
+If the <b>Splunk Universal Forwarder for ARM</b> is running it will appear in the output. If it doesn't appear after a few seconds the forwarder isn't running. Refer to Splunk's <a href="https://splunkbase.splunk.com/app/1611/" target="_blank">documentation</a> to resolve. control-break to exit.<p></p>
+	
+	Is the <b>Splunk Universal forwarder for ARM</b> is running but you still aren't seeing any data in <b>pi-hole Visualiser</b> run the following command.<br>
+	<table border="0"><tr><td>
+	<pre>root@RaspberryPi:/home/pi# tail -f /opt/splunkforwarder/var/log/splunk/splunkd.log</pre></td></tr></table><p></p>	
+	
+	If the <b>Splunk Universal Forwarder for ARM</b> is running OK the log will be relatively quiet. If you are seeing ERRORS they will need to be addressed.<p></p>
+	</li>
+	  </ul>
+	  	  <p></p>
+<h1>Change Log</h1>
+	<table border="0" cellpadding="5">
+	<tr>
+	<td><b>Version</b></td>
+	<td><b>Release Date</b></td>
+	<td><b>Comments</b></td>
+	</tr>
+	<td>1.0</td>
+	<td>25/01/2016</td>
+	<td>First Release</td>
+	</tr>
+	<tr>
+	<td>1.1</td>
+	<td>31/01/2016</td>
+	<td>Added &quot;Pi Health&quot; dashboard, other dashboard tweaks, documentation improvements.</td>
+	</tr>
+	<tr>
+	<td>1.1.1</td>
+	<td>31/01/2016</td>
+	<td>pi-hole Visualiser now creates its own index, squashed bugs introduced in 1.1</td>
+	</tr>
+		<tr>
+	<td>1.2</td>
+	<td>21/02/2016</td>
+	<td>Added speedtest reporting (Refer to instructions <a href=https://www.reddit.com/r/raspberry_pi/comments/43griv/how_to_make_your_pihole_log_an_hourly_speed_test/ target=_blank>here</a>.)</td>
+	</tr>
+	</table>
+	<p></p>
+
+<h1>License</h1>	 
+	 <table border="0"><tr><td>
+	 <pre>
+The MIT License (MIT)
+
+Copyright (c) 2016 Conrad E Johnston
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</pre>
+</td></tr></table>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

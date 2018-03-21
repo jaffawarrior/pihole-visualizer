@@ -1,0 +1,10 @@
+<nav search_view="Summary" color="#B55698">
+  <view name="Summary" default='true'/>
+  <view name="ClientActivity"/>
+  <view name="DomainActivity"/>
+  <view name="Map"/>
+  <view name="RaspberryPi"/>
+  <view name="SpeedTest"/>
+  <view name="Diagnostic"/>
+  <view name="About"/>
+</nav>
