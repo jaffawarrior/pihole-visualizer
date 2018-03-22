@@ -1,4 +1,4 @@
-I started with https://splunkbase.splunk.com/app/3023/ and made some tweaks to searches, added some drilldowns and other improvements.
+I started with https://splunkbase.splunk.com/app/3023/ and changed some searches, added drilldowns, fixed some inputs and outputs, and made other improvements.
 
 To add the speedtest, move speedtest.csv to /var/www/html and add it to Cron to run every half hour:
 
